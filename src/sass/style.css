@@ -1,0 +1,31 @@
+.bground {
+  background-color: #8DB5AA;
+}
+
+.navLink {
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #8DB5AA;
+  background-color: rgba(141, 181, 170, 0.2);
+}
+
+.btn {
+  background-color: #8DB5AA;
+  border: #8DB5AA;
+  width: 100%;
+}
+
+.search-header {
+  color: #002C72;
+}
+
+.border {
+  border-color: #8DB5AA;
+}
+
+.scale {
+  width: 60%;
+}
+/*# sourceMappingURL=style.css.map */
