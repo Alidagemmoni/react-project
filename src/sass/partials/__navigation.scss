@@ -2,6 +2,12 @@
     background-color: $background-color;
 }
 
-.navLink {
+.nav-link {
+    color: $nav-link;
+
+}
+
+.align-right {
+    text-align: right;
     color: $nav-link;
 }

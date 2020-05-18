@@ -7,30 +7,35 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/homepage/HomePage";
 import ContactPage from "./components/contact/ContactPage";
 import AdminLogin from "./components/admin/AdminLogin";
-import Image from 'react-bootstrap/Image';
 
 function App() {
   return (
     <Router>
       <Navbar className="bground" expand="lg">
-      <Navbar.Brand  href="/">
-        <Image src="HolidazeLogo.svg/100px250" fluid />
-      </Navbar.Brand>
-      <Nav className="mr-auto">
+      <Navbar.Brand href="/">
+        <img
+          src="/holidazelogo.svg"
+          width="120"
+          className="d-inline-block align-top"
+          alt="Holidaze Logo"
+        />
+    </Navbar.Brand>
+      <Navbar.Collapse className="justify-content-end">
         <Nav.Link className="nav-link" href="/">Home</Nav.Link>
-        <Nav.Link className="nav-link" href="/contact/">Contact</Nav.Link>
-        <Nav.Link className="nav-link" href="/admin/">Admin Login</Nav.Link>
-      </Nav>
+        <Nav.Link className="nav-link" href="/contact">Contact</Nav.Link>
+        <Nav.Link className="nav-link" href="/admin">Admin Login</Nav.Link>
+      </Navbar.Collapse>
       </Navbar>
       <Container>
           <Switch>
-              <Route path="/" exact component={HomePage} />
+              <Route exact path="/" component={HomePage} />
               <Route path="/contact/:id" component={ContactPage} />
-              <Route path="/admin" component={AdminLogin} />
+              {/* <Route path="/admin" component={AdminLogin} /> */}
           </Switch>
       </Container>
     </Router>
     )
   }
+
 
 export default App;

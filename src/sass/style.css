@@ -2,7 +2,12 @@
   background-color: #8DB5AA;
 }
 
-.navLink {
+.nav-link {
+  color: #FFFFFF;
+}
+
+.align-right {
+  text-align: right;
   color: #FFFFFF;
 }
 
@@ -27,5 +32,9 @@ body {
 
 .scale {
   width: 60%;
+}
+
+.search {
+  border-color: #8DB5AA;
 }
 /*# sourceMappingURL=style.css.map */
