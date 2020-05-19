@@ -1,21 +1,40 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import { BASE_URL } from "../../constants/api";
+import { Typeahead } from 'react-bootstrap-typeahead';
+import ReactDOM from 'react-dom';
+import options from './data';
+import 'react-bootstrap-typeahead/css/Typeahead.css';
+import './styles.css';
+import FormGroup from "react-bootstrap/FormGroup";
+import Fragment from "react-bootstrap-typeahead";
+import Control from "react-bootstrap/FormControl";
 
-function Search({ doSearch }) {
+
+const SearchBar = () => {
+    const [multiple, setMultiple] = useState(false);
+    const [selected, setSelected] = useState([]);
+  
     return (
-        <>
-        <input className="searchBar"
-            placeholder="Search hotels..."
-            onChange={function(e) {
-                doSearch(e.target.value);
-            }}
+      <Fragment>
+        <Typeahead
+          id="basic-typeahead-example"
+          labelKey="name"
+          multiple={multiple}
+          onChange={setSelected}
+          options={options}
+          placeholder="Search hotels..."
+          selected={selected}
         />
-        </>
+        <FormGroup>
+          <Control
+            checked={multiple}
+            onChange={(e) => setMultiple(e.target.checked)}
+            type="checkbox">
+            Multi-Select
+          </Control>
+        </FormGroup>
+      </Fragment>
     );
-}
+  };
 
-Search.propTypes = {
-    doSearch: PropTypes.func.isRequired
-};
-
-export default Search;
+  export default SearchBar;
