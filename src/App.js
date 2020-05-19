@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HomePage from "./components/homepage/HomePage";
+import HomePage from "./components/homepage/Homepage";
 import ContactPage from "./components/contact/ContactPage";
 import AdminLogin from "./components/admin/AdminLogin";
 
@@ -26,13 +26,11 @@ function App() {
         <Nav.Link className="nav-link" href="/admin">Admin Login</Nav.Link>
       </Navbar.Collapse>
       </Navbar>
-      <Container>
           <Switch>
               <Route exact path="/" component={HomePage} />
               <Route path="/contact/:id" component={ContactPage} />
               {/* <Route path="/admin" component={AdminLogin} /> */}
           </Switch>
-      </Container>
     </Router>
     )
   }
