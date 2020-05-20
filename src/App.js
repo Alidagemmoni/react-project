@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/homepage/Homepage";
 import ContactPage from "./components/contact/ContactPage";
 import AdminLogin from "./components/admin/AdminLogin";
+import HotelSpecific from './components/hotelresult/HotelSpecific';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route exact path="/" component={HomePage} />
               <Route path="/contact/:id" component={ContactPage} />
               {/* <Route path="/admin" component={AdminLogin} /> */}
+              <Route path="/hotelspecific/:id" component={HotelSpecific}></Route>
           </Switch>
     </Router>
     )
