@@ -1,6 +1,5 @@
 import React from 'react';
 import "./sass/style.scss";
-import Container from 'react-bootstrap/Container';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -8,6 +7,7 @@ import HomePage from "./components/homepage/Homepage";
 import ContactPage from "./components/contact/ContactPage";
 import AdminLogin from "./components/admin/AdminLogin";
 import HotelSpecific from './components/hotelresult/HotelSpecific';
+import HotelList from './components/hotels/HotelList';
 
 function App() {
   return (
@@ -32,10 +32,10 @@ function App() {
               <Route path="/contact/:id" component={ContactPage} />
               {/* <Route path="/admin" component={AdminLogin} /> */}
               <Route path="/hotelspecific/:id" component={HotelSpecific}></Route>
+              <Route path="/hotellist" component={HotelList}></Route>
           </Switch>
     </Router>
     )
   }
-
 
 export default App;

@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { BASE_URL, headers } from "../../constants/api";
 
-
 function HotelSpecific(props) {
     const [hotel, setHotel] = useState({});
 
@@ -23,20 +22,19 @@ function HotelSpecific(props) {
     }, [])
     
     return (
-        <Container>
-            
+        <Container> 
             <Row>
-                <Col>
-                    <h2>{hotel.name}</h2>
+                <Col className="margin">
+                    <h2 className="header">{hotel.name}</h2>
                 </Col>
             </Row>
-            <Row>
+            <Row className="bg-specific">
                 <Col sm={4}>
-                    <Card.Img variant="top" src={hotel.image}/>
+                    <Card.Img variant="top" className="img-specific" src={hotel.image}/>
                 </Col>
                 <Col sm={7}>
-                    <article>
-                        <Row>
+                    <article className="bg-specific"> 
+                        <Row> 
                             <Col>
                                 <p>Max guests</p>
                             </Col>
@@ -67,7 +65,7 @@ function HotelSpecific(props) {
                             <Col>{hotel.description}</Col> 
                         </Row> 
                     </article>                    
-                    <Button variant="primary">Book now</Button>
+                    <Button className="button">Book now</Button>
                 </Col>
             </Row>
         </Container>
