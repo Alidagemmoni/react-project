@@ -1,3 +1,18 @@
-.row-margin {
-    margin-bottom: 1.5em;
+.button {
+    background-color: $button;
 }
+
+.button:hover {
+    background-color: #000000;
+}
+
+.header {
+    color: $header;
+}
+
+.bg-specific {
+    background-color: $background-color;
+    color: $text;
+    margin-bottom: 2em;
+}
+
