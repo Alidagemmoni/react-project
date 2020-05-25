@@ -64,13 +64,12 @@ function HotelSpecific(props) {
                             </Col>
                             <Col>{hotel.description}</Col> 
                         </Row> 
-                    </article>                    
-                    <Button className="button">Book now</Button>
+                    </article>
+                    <Button className="button" onClick={() => localStorage.setItem("hotelName", hotel.name)} href={`/bookhotel/${hotel.id}`}>Book now</Button>
                 </Col>
             </Row>
         </Container>
     );
 }
-
 
 export default HotelSpecific;
