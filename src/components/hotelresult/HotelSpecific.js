@@ -64,7 +64,7 @@ function HotelSpecific(props) {
                             </Col>
                             <Col>{hotel.description}</Col> 
                         </Row> 
-                    </article>                    
+                    </article>
                     <Button className="button" onClick={() => localStorage.setItem("hotelName", hotel.name)} href={`/bookhotel/${hotel.id}`}>Book now</Button>
                 </Col>
             </Row>
