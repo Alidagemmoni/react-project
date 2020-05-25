@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./sass/style.scss";
-import Container from 'react-bootstrap/Container';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/homepage/Homepage";
 import ContactPage from "./components/contact/ContactPage";
 import AdminLogin from "./components/admin/AdminLogin";
-import HotelSpecific from './components/hotelresult/HotelSpecific';
+import HotelSpecific from "./components/hotelresult/HotelSpecific";
+import HotelList from "./components/hotels/HotelList";
+import BookHotel from "./components/enquiry/BookHotel";
 
 function App() {
   return (
@@ -30,8 +31,10 @@ function App() {
           <Switch>
               <Route exact path="/" component={HomePage} />
               <Route path="/contact/:id" component={ContactPage} />
-              {/* <Route path="/admin" component={AdminLogin} /> */}
+              <Route path="/admin" component={AdminLogin} />
               <Route path="/hotelspecific/:id" component={HotelSpecific}></Route>
+              <Route path="/hotellist" component={HotelList}></Route>
+              <Route path="/bookhotel/:id" component={BookHotel}></Route>
           </Switch>
     </Router>
     )
@@ -39,3 +42,5 @@ function App() {
 
 
 export default App;
+
+
