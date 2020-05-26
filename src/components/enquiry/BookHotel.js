@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -14,7 +13,12 @@ function BookHotel(props) {
         email: "",
         checkIn: "",
         checkOut: ""
+    }); 
+    
+    const [ countries, setCountries ] = useState({
+        country: ""
     });
+
     const [submit, setSubmit] = useState(false);
 
     const data = {
@@ -22,10 +26,9 @@ function BookHotel(props) {
         email: enquiry.email,
         establishmentId: enquiry.establishmentId,
         checkIn: enquiry.checkIn,
-        checkOut: enquiry.checkOut
+        checkOut: enquiry.checkOut,
+        country: countries.country
     }; 
-  
-    const history = useHistory();
 
     function submitEnquiry(event) {
 
@@ -54,6 +57,8 @@ return (
                                 submitEnquiry={submitEnquiry}
                                 enquiry={enquiry}
                                 setEnquiry={setEnquiry}
+                                countries={countries}
+                                setCountries={setCountries}
                             />
                         }
             </Col>

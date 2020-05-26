@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/homepage/Homepage";
-import ContactPage from "./components/contact/ContactPage";
+import ContactForm from "./components/contact/ContactUs";
 import AdminLogin from "./components/admin/AdminLogin";
 import HotelSpecific from "./components/hotelresult/HotelSpecific";
 import HotelList from "./components/hotels/HotelList";
@@ -30,7 +30,7 @@ function App() {
       </Navbar>
           <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route path="/contact/:id" component={ContactPage} />
+              <Route exact path="/contact" component={ContactForm} />
               <Route path="/admin" component={AdminLogin} />
               <Route path="/hotelspecific/:id" component={HotelSpecific}></Route>
               <Route path="/hotellist" component={HotelList}></Route>
