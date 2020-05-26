@@ -37,7 +37,7 @@ const HomePage = () => {
                                 <Button variant="outline-secondary">Search</Button>
                         </InputGroup.Append>
                     </InputGroup>
-                    <section>
+                    <section className="margin">
                         <img
                             src="/travel.jpg"
                             width="100%"
