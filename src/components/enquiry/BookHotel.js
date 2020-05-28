@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import BookForm from './BookForm';
 import { BASE_URL, headers } from "../../constants/api";
 
-function BookHotel(props) {
+const BookHotel = (props) => {
     const [ enquiry, setEnquiry ]  = useState({
         firstName: "",
         lastName: "",
@@ -14,10 +14,6 @@ function BookHotel(props) {
         checkIn: "",
         checkOut: ""
     }); 
-    
-    const [ countries, setCountries ] = useState({
-        country: ""
-    });
 
     const [submit, setSubmit] = useState(false);
 
@@ -27,7 +23,6 @@ function BookHotel(props) {
         establishmentId: enquiry.establishmentId,
         checkIn: enquiry.checkIn,
         checkOut: enquiry.checkOut,
-        country: countries.country
     }; 
 
     function submitEnquiry(event) {
@@ -57,8 +52,6 @@ return (
                                 submitEnquiry={submitEnquiry}
                                 enquiry={enquiry}
                                 setEnquiry={setEnquiry}
-                                countries={countries}
-                                setCountries={setCountries}
                             />
                         }
             </Col>

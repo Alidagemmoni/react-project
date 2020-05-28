@@ -44,7 +44,7 @@ const HomePage = () => {
                             className="d-inline-block align-top"
                             alt="Holidaze Logo"
                         />
-                        <Button className="btn" href="/hotellist">See all hotels</Button>
+                        <Button className="btn" href="/hotellist" block>See all hotels</Button>
                     </section>
                 </Col>
                 <Col/>

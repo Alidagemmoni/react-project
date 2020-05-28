@@ -1,0 +1,13 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    margin: 10px;
+}
+
+.middle {
+    display: block;
+    margin: 0px auto;
+}

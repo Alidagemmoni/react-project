@@ -19,7 +19,7 @@ function HotelList(props) {
         }
         fetchHotels();
         
-    }, [])
+    }, [])  
     
     return (
         <Container>

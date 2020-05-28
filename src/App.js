@@ -9,13 +9,15 @@ import AdminLogin from "./components/admin/AdminLogin";
 import HotelSpecific from "./components/hotelresult/HotelSpecific";
 import HotelList from "./components/hotels/HotelList";
 import BookHotel from "./components/enquiry/BookHotel";
+import AdminComps from "./components/admin/AdminComps";
+import Enquiry from "./components/admin/enquiry/Enquiry";
 
 function App() {
   return (
     <Router>
       <Navbar className="bground" expand="lg">
       <Navbar.Brand href="/">
-        <img
+        <img  
           src="/holidazelogo.svg"
           width="120"
           className="d-inline-block align-top"
@@ -31,10 +33,12 @@ function App() {
           <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/contact" component={ContactForm} />
-              <Route path="/admin" component={AdminLogin} />
-              <Route path="/hotelspecific/:id" component={HotelSpecific}></Route>
-              <Route path="/hotellist" component={HotelList}></Route>
-              <Route path="/bookhotel/:id" component={BookHotel}></Route>
+              <Route exact path="/admin" component={AdminLogin} />
+              <Route exact path="/hotelspecific/:id" component={HotelSpecific}></Route>
+              <Route exact path="/hotellist" component={HotelList}></Route>
+              <Route exact path="/bookhotel/:id" component={BookHotel}></Route>
+              <Route exact path="/admin" component={AdminComps}></Route>
+              <Route exact path="/admin/enquiries" component={Enquiry}></Route>
           </Switch>
     </Router>
     )

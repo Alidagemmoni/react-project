@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Col, Row, Button } from 'react-bootstrap';
 
 const BookForm = (props) => {
-    return (  
+    return (
             <section className="bg-specific">
                 <Form style={{ padding: "20px" }}>
                     <Form.Group as={Row} controlId="formHorizontalName">
