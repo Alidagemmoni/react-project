@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
-import { Form, Row, Container, Col } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
 
 const schema = yup.object().shape({
 	firstName: yup.string().required("First name is required").min(2, "Please type more than 2 characters"),
@@ -76,7 +76,7 @@ const ContactPage = (props) => {
                         </Col>
                     </Form.Group>  
                 </Form>
-                <Button onClick={props.submitContact} className="button" >Send message</Button>
+                <Button onClick={props.submitContact} className="button" block>Send message</Button>
             </section>
 	); 
 }
