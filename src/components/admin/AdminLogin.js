@@ -1,79 +1,81 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 import { Form, Col, Row, Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 
 
-const AdminLogin = () => {
+class AdminLogin extends React.Component {
+    constructor(props) {
+        super(props);
+         this.state = {
+            username: "",
+            password: "",
+            isAuthenticated: false
+         }
+         this.handleChange = this.handleChange.bind(this);
+         this.handleLogin = this.handleLogin.bind(this);
+    }
 
-    const [login, setLogin] = useState({
-        username: "",
-        password: ""
-    });
-
-    const data = {
-        username: login.username,
-        password: login.password
-
-    };
-
-    const history = useHistory();
-
-    const handleLogin = () => {
-        localStorage.setItem("credential", JSON.stringify(data))
-        history.push("/admin");
-    } 
-
-   
-    /* function useLocalState(localItem) {
-        const [loc, setState ] = useState(JSON.parse(localStorage.getItem(localItem)));
-
-        function setLoc(newItem) {
-            localStorage.setItem(localItem, newItem);
+    componentDidMount() {
+        const admin = JSON.parse(localStorage.getItem('credential'));
+        if(admin && admin.isAuthenticated) {
+            this.props.history.push('/admincomp')
         }
+    }
 
-        return [loc, setLoc];
-    } */
+    handleChange(e) {
+        this.setState({ [e.target.name]: e.target.value })
+    }
 
-    //const [info, setInfo ] = useLocalState("credential");
-     // Get the information from the state and save it to local storage?
+    handleLogin() {
+        let admin = JSON.parse(localStorage.getItem('credential'));
+        const { username } = this.state;
+        if(admin && (admin.username === username)) {
+            admin.isAuthenticated = true;
+            localStorage.setItem('credential', JSON.stringify(admin))
+            this.props.history.push('/admincomp')
+        }
+    }
 
-    return (
-        <Container className="d-flex justify-content-center">
-            <Col lg={7}>
-                <Row className="margin">
-                    <Col className="d-flex justify-content-center">
-                        <h2>Log in</h2> 
-                    </Col>                
-                </Row>
-                <Form style={{ padding: "20px" }}>
-                    <Form.Group as={Row} controlId="formHorizontalName">
-                        <Form.Label column sm={3}>Username</Form.Label>
-                        <Col>
-                            <Form.Control
-                                value={login.username}
-                                onChange={(event) => setLogin({...login, username: event.target.value})}
-                            />
-                        </Col>
-                    </Form.Group>
-                    <Form.Group as={Row} controlId="formHorizontalName">
-                        <Form.Label column sm={3}>Password</Form.Label>
-                        <Col>
-                            <Form.Control
-                                type="password"
-                                value={login.password}
-                                onChange={(event) => setLogin({...login, password: event.target.value})}
-                            />
-                        </Col>
-                    </Form.Group>
-                    
-                </Form>  
-                <Col className="d-flex justify-content-center"> 
-                    <Button onClick={handleLogin} className="button" style={{width: '25%'}} size="sm">Log in</Button>
+    render() {
+        return (
+            <Container className="d-flex justify-content-center">
+                <Col lg={7}>
+                    <Row className="margin">
+                        <Col className="d-flex justify-content-center">
+                            <h2>Log in</h2> 
+                        </Col>                
+                    </Row>
+                    <Form style={{ padding: "20px" }}>
+                        <Form.Group as={Row} controlId="formHorizontalName">
+                            <Form.Label column sm={3}>Username</Form.Label>
+                            <Col>
+                                <Form.Control
+                                    value={this.state.username}
+                                    name="username"
+                                    onChange={this.handleChange}
+                                />
+                            </Col>
+                        </Form.Group>
+                        <Form.Group as={Row} controlId="formHorizontalName">
+                            <Form.Label column sm={3}>Password</Form.Label>
+                            <Col>
+                                <Form.Control
+                                    type="password"
+                                    name="password"
+                                    value={this.state.password}
+                                    onChange={this.handleChange}
+                                />
+                            </Col>
+                        </Form.Group>
+                        
+                    </Form>  
+                    <Col className="d-flex justify-content-center"> 
+                        <Button onClick={this.handleLogin} className="button" style={{width: '25%'}} size="sm">Log in</Button>
+                    </Col> 
                 </Col> 
-            </Col> 
-        </Container>
-    )
+            </Container>
+        )
+    }
 }
 
 export default AdminLogin;

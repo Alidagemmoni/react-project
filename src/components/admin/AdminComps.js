@@ -1,19 +1,21 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 
-const AdminNav = () => {
+const AdminComp = () => {
     return ( 
         <Container className="margin">
             <Row>
                 <Col className="bg-specific center">
                     <h2>Enquiries</h2>
-                    <img
+                    <Link to={"/admin/enquiries"}><img
                         src="/enquiry.svg"
                         width="100"
                         alt="Holidaze Logo"
                         className="middle"
                     /> 
+                    </Link>
                     {/* link from image/icon to next site */}
                 </Col>
                 <Col className="bg-specific center">
@@ -39,4 +41,4 @@ const AdminNav = () => {
     )
 }
 
-export default AdminNav;
+export default AdminComp;
