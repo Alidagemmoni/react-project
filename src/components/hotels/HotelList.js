@@ -22,7 +22,7 @@ function HotelList(props) {
     }, [])  
     
     return (
-        <Container>
+        <Container>  
             <Row>
                 <Col>
                     <h2 className="header margin">All our hotels</h2>
@@ -38,7 +38,7 @@ function HotelList(props) {
                         <Col sm={7}>
                             <Row>
                                 <Col>
-                                    <h2>{hotel.name}</h2>
+                                    <h2>{hotel.name}</h2>  
                                 </Col>            
                             </Row>
                             <Row>
@@ -51,7 +51,7 @@ function HotelList(props) {
                                     <p>Per night: &nbsp; {hotel.price}</p>
                                 </Col> 
                                 <Col>
-                                    <Button className="button"  href={`/hotelspecific/${hotel.id}`}>Choose</Button>
+                                    <Button className="button" href={`/hotelspecific/${hotel.id}`}>Choose</Button>
                                 </Col>
                             </Row>                  
                         </Col>

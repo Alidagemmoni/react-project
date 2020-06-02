@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+import { Col, Row, Container } from "react-bootstrap";
 import BookForm from './BookForm';
 import { BASE_URL, headers } from "../../constants/api";
 
@@ -11,9 +9,9 @@ const BookHotel = (props) => {
         lastName: "",
         establishmentId: props.match.params.id,
         email: "",
-        checkIn: "",
+        checkIn: "",  
         checkOut: ""
-    }); 
+    });  
 
     const [submit, setSubmit] = useState(false);
 

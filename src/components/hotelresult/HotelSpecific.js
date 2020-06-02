@@ -18,7 +18,7 @@ function HotelSpecific(props) {
             .then(data => setHotel(data))
         }
         fetchHotel();
-        console.log(hotel)
+        console.log(hotel)  
     }, [])
     
     return (

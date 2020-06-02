@@ -14,7 +14,7 @@ const SearchBar = () => {
     const [multiple, setMultiple] = useState(false);
     const [selected, setSelected] = useState([]);
   
-    return (
+    return (  
       <Fragment>
         <Typeahead
           id="basic-typeahead-example"
