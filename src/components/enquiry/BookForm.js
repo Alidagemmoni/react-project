@@ -2,16 +2,16 @@ import React from 'react';
 import { Form, Col, Row, Button } from 'react-bootstrap';
 
 const BookForm = (props) => {
-    return (
+    return (  
             <section className="bg-specific">
-                <Form style={{ padding: "20px" }}>
+                <Form style={{ padding: "20px" }}>  
                     <Form.Group as={Row} controlId="formHorizontalName">
                         <Form.Label column sm={2}>First name</Form.Label>
-                        <Col sm={6}>
+                        <Col sm={6}> 
                             <Form.Control
                                 type="name"
-                                 value={props.enquiry.firstName}
-                                 onChange={(event) => props.setEnquiry({...props.enquiry, firstName: event.target.value})}
+                                value={props.enquiry.firstName}
+                                onChange={(event) => props.setEnquiry({...props.enquiry, firstName: event.target.value})}
                             />
                         </Col>
                     </Form.Group>

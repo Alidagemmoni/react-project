@@ -8,33 +8,19 @@ const AdminSignup = () => {
     const [user, setUser] = useState({
         username: "",
         password: "",
-        isAuthenticated: false
+        isAuthenticated: true
     });
 
     const handleSignup = () => {
         localStorage.setItem("credential", JSON.stringify(user))
     } 
 
-   
-    /* function useLocalState(localItem) {
-        const [loc, setState ] = useState(JSON.parse(localStorage.getItem(localItem)));
-
-        function setLoc(newItem) {
-            localStorage.setItem(localItem, newItem);
-        }
-
-        return [loc, setLoc];
-    } */
-
-    //const [info, setInfo ] = useLocalState("credential");
-     // Get the information from the state and save it to local storage?
-
     return (
         <Container className="d-flex justify-content-center">
             <Col lg={7}>
                 <Row className="margin">
                     <Col className="d-flex justify-content-center">
-                        <h2>Log in</h2> 
+                        <h2>Sign Up</h2> 
                     </Col>                
                 </Row>
                 <Form style={{ padding: "20px" }}>
@@ -60,7 +46,7 @@ const AdminSignup = () => {
                     
                 </Form>  
                 <Col className="d-flex justify-content-center"> 
-                    <Button onClick={handleSignup} className="button" style={{width: '25%'}} size="sm">Log in</Button>
+                    <Button onClick={handleSignup} className="button" style={{width: '25%'}} size="sm">Register</Button>
                 </Col> 
             </Col> 
         </Container>

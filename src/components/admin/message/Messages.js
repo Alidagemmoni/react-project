@@ -70,7 +70,8 @@ const Messages = (props) => {
                                     </Form.Group>
                                 </Form>
                             </Card.Text>
-                            <Button variant="primary">Respond</Button> {/* push this button to reply on message page */}
+                            <Button variant="primary" href={`/admin/messagerespond/${contact.name}`}>Respond</Button> 
+                            {/* push this button to reply on a message with name from the message page */}
                         </Card.Body>
                     </Card>            
                 </Col>

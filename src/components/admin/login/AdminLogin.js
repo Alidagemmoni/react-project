@@ -28,8 +28,8 @@ class AdminLogin extends React.Component {
 
     handleLogin() {
         let admin = JSON.parse(localStorage.getItem('credential'));
-        const { username } = this.state;
-        if(admin && (admin.username === username)) {
+        const { username, password } = this.state;
+        if(admin && ((admin.username === username) && (admin.password === password))) {
             admin.isAuthenticated = true;
             localStorage.setItem('credential', JSON.stringify(admin))
             this.props.history.push('/admincomp')

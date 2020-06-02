@@ -8,33 +8,37 @@ const AdminComp = () => {
         <Container className="margin">
             <Row>
                 <Col className="bg-specific center">
-                    <h2>Enquiries</h2>
-                    <Link to={"/admin/enquiries"}><img
+                    <h2>Establishments</h2>
+                    <Link to={"/admin/establishments"}>
+                        <img
                         src="/enquiry.svg"
                         width="100"
                         alt="Holidaze Logo"
                         className="middle"
-                    /> 
+                        /> 
                     </Link>
-                    {/* link from image/icon to next site */}
                 </Col>
                 <Col className="bg-specific center">
                     <h2>Create establishment</h2>
+                    <Link to={"/admin/createestb"}>
                     <img
                         src="/estb.svg"
                         width="100"
                         alt="Holidaze Logo"
                         className="middle"
                     />
+                    </Link>
                 </Col>
                 <Col className="bg-specific center">
                     <h2>Messages</h2>
-                    <img
-                        src="/messages.svg"
-                        width="100"
-                        alt="Holidaze Logo"
-                        className="middle"
-                    />
+                    <Link to={"/admin/message"}>
+                        <img
+                            src="/messages.svg"
+                            width="100"
+                            alt="Holidaze Logo"
+                            className="middle"
+                        />
+                    </Link>
                 </Col>
             </Row>
         </Container>
