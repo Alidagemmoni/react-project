@@ -45,12 +45,17 @@ const AllEstablishments = (props) => {
     return (
         <Container className="margin">
             <Row>
+                <Col>
+                    <h2>All establishments</h2>
+                </Col>
+            </Row>
+            <Row>
             {
                 enquiries.length ?
                 enquiries.map((enquiry) => (
                     <Col key={enquiry.id} md={4} className="pb-3">
                         <Card style={{backgroundColor: '#8DB5AA'}}>
-                            <Card.Header style={{backgroundColor: '#8DB5AA'}}>{establishments.filter(data => data.id === enquiry.establishmentId)[0] && establishments.filter(data => data.id === enquiry.establishmentId)[0].name || 'Establishment'}</Card.Header> 
+                            <Card.Header className="estb-header" style={{backgroundColor: '#8DB5AA'}}>{establishments.filter(data => data.id === enquiry.establishmentId)[0] && establishments.filter(data => data.id === enquiry.establishmentId)[0].name || 'Establishment'}</Card.Header> 
                             <Card.Body>
                                 <EstablishmentDetail
                                     enquiry={enquiry}

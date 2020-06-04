@@ -3,3 +3,13 @@ body {
     background-color:rgba($background-color, 0.2);
 }
 
+h2 {
+    font-family: "mr-eaves-modern", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+textarea {
+    resize: none;
+}

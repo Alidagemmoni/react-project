@@ -39,7 +39,7 @@ const AdminSignup = () => {
                             <Form.Control
                                 type="password"
                                 value={user.password}
-                                onChange={(event) => setUser({...user, password: event.target.value})}
+                                onChange={(event) => setUser({...user, password: event.target.value.toLowerCase()})}
                             />
                         </Col>
                     </Form.Group>
