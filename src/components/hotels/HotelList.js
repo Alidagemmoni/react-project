@@ -23,7 +23,7 @@ function HotelList(props) {
     
     return (
         <Container>  
-            <Row>
+            <Row>  
                 <Col>
                     <h2 className="header margin">All our hotels</h2>
                 </Col>

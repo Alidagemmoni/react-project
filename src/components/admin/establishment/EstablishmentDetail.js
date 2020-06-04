@@ -30,39 +30,39 @@ const EstablishmentDetail = (props) => {
         return (
             <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label column sm="4">
-                        Name
+                    <Form.Label className="estb-text" column sm="4">
+                        Name:
                     </Form.Label>
                     <Col sm="8">
-                        <Form.Control plaintext readOnly defaultValue={props.enquiry.name} />
+                        <Form.Control className="estb-text" plaintext readOnly defaultValue={props.enquiry.name} />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label column sm="4">
-                        Email
+                    <Form.Label className="estb-text" column sm="4">
+                        Email:
                     </Form.Label>
                     <Col sm="8">
-                        <Form.Control type="email" plaintext readOnly defaultValue={props.enquiry.email} />
+                        <Form.Control className="estb-text" type="email" plaintext readOnly defaultValue={props.enquiry.email} />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label column sm="4">
-                        Check-In
+                    <Form.Label className="estb-text" column sm="4">
+                        Check-In:
                     </Form.Label>
                     <Col sm="8">
-                        <Form.Control plaintext readOnly defaultValue={new Date(props.enquiry.checkIn).toDateString()} />
+                        <Form.Control className="estb-text" plaintext readOnly defaultValue={new Date(props.enquiry.checkIn).toDateString()} />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label column sm="4">
-                        Check-Out
+                    <Form.Label className="estb-text" column sm="4">
+                        Check-Out:
                     </Form.Label>
                     <Col sm="6">
-                        <Form.Control plaintext readOnly defaultValue={new Date(props.enquiry.checkOut).toDateString()} />
+                        <Form.Control className="estb-text" plaintext readOnly defaultValue={new Date(props.enquiry.checkOut).toDateString()} />
                     </Col>
                 </Form.Group>
-                <Button variant="primary" onClick={() => props.handlesetStatus(props.enquiry.id, 'accept')}>Accept</Button>
-                <Card.Link href="#" onClick={() => props.handlesetStatus(props.enquiry.id, 'decline')} className="float-right mt-1">Decline</Card.Link>
+                <Button className="button-accept" onClick={() => props.handlesetStatus(props.enquiry.id, 'accept')}>Accept</Button>
+                <Card.Link href="#" onClick={() => props.handlesetStatus(props.enquiry.id, 'decline')} className="float-right mt-1 button-decline">Decline</Card.Link>
             </Form>
         )
     }

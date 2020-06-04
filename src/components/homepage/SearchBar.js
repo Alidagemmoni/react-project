@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BASE_URL } from "../../constants/api";
+import React, { useState } from "react";
 import { Typeahead } from 'react-bootstrap-typeahead';
-import ReactDOM from 'react-dom';
 import options from './data';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import './styles.css';

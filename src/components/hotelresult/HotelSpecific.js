@@ -9,7 +9,7 @@ import { BASE_URL, headers } from "../../constants/api";
 function HotelSpecific(props) {
     const [hotel, setHotel] = useState({});
 
-    useEffect(() => {
+    useEffect(() => {  
         const id = props.match.params.id
         const url = BASE_URL + "establishments/" + id;
         async function fetchHotel() {

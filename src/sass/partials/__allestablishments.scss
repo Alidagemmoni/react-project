@@ -1,0 +1,29 @@
+.estb-header {
+    font-family: "mr-eaves-modern", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+    color: $text;
+}
+
+.estb-text {
+    font-family: "trade-gothic-next", sans-serif;
+    font-style: italic;
+    color: $text;
+}
+
+.button-accept {
+    font-family: "trade-gothic-next", sans-serif;
+    font-style: bold;
+    font-size: 20px;
+    background-color: $button;
+}
+
+.button-decline {
+    color: $text;
+}
+
+.button-accept:hover {
+    box-shadow: 5px 5px 5px $button;
+    background-color: $button;
+}
