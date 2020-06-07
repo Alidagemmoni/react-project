@@ -3,11 +3,15 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 300px;
+    height: 400px;
     margin: 10px;
 }
 
 .middle {
     display: block;
     margin: 0px auto;
+}
+
+.comp-header {
+    color: $text;
 }

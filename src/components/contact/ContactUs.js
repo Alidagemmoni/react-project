@@ -7,7 +7,7 @@ import { BASE_URL, headers } from "../../constants/api";
 
 const ContactUs = (props) => {
     const [contact, setContact] = useState({
-        firstName: "",
+        firstName: "", 
         lastName: "",
         email: "",
         message: ""
@@ -32,7 +32,7 @@ const ContactUs = (props) => {
     }
 
     return (
-        <Container>
+        <Container className="align-center">
             <Col lg={8}>
                 <Row className="margin">
                 <Col>

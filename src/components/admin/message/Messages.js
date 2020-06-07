@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import { BASE_URL, headers } from "../../../constants/api";
 import Spinner from "react-bootstrap/Spinner";
 import Card from "react-bootstrap/Card";
 import MessageDetail from './MessageDetail';
 import RespondModal from './RespondModal';
+import { NotificationContext } from '../../context/notifications';
 
-const Messages = (props) => {
+const Messages = () => {
     const [messages, setMessages] = useState([]);
     const [modal, setModal] = useState(false);
     const [response, setResponse] = useState({
+        name: '',
         email: '',
         message: ''
     })
-
+    const { dispatch } = useContext(NotificationContext);
+ 
     useEffect(() => {
         const url = BASE_URL + "contacts";
         async function fetchMessages() {
@@ -22,20 +25,25 @@ const Messages = (props) => {
                 .then(data => setMessages(data))
         }
         fetchMessages();
- 
     }, []);
 
-    const handleModalAction = (value, email) => {
+    const handleModalAction = (value, email, name) => {
         setModal(value)
-        if(email){
-            setResponse({...response, email})
+        if(value){
+            setResponse({...response, email, name})
         } else if(!value) {
             setResponse({
+                name: '',
                 email: '',
                 message: ''
             });
         }
-        
+    }
+
+    const handleSendMessage = () => {
+        localStorage.setItem('Email', JSON.stringify(response));
+        setModal(false);
+        dispatch({ type: 'SUCCESS', message: 'Message Sent!' });
     }
 
     return (
@@ -68,9 +76,10 @@ const Messages = (props) => {
                 modal ?
                     <RespondModal
                         open={modal}
-                        handleClose={handleModalAction}
+                        handleModalAction={handleModalAction}
                         response={response}
                         setResponse={setResponse}
+                        handleSubmit={handleSendMessage}
                     />
                 : null
             }

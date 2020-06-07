@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const AdminComp = () => {
     return ( 
         <Container className="margin">
-            <Row>
+            <Row> 
                 <Col className="bg-specific center">
-                    <h2>Establishments</h2>
+                    <h2 className="comp-header">Establishments</h2>
                     <Link to={"/admin/establishments"}>
                         <img
                         src="/enquiry.svg"
@@ -19,7 +19,7 @@ const AdminComp = () => {
                     </Link>
                 </Col>
                 <Col className="bg-specific center">
-                    <h2>Create establishment</h2>
+                    <h2 className="comp-header">Create establishment</h2>
                     <Link to={"/admin/createestb"}>
                     <img
                         src="/estb.svg"
@@ -30,7 +30,7 @@ const AdminComp = () => {
                     </Link>
                 </Col>
                 <Col className="bg-specific center">
-                    <h2>Messages</h2>
+                    <h2 className="comp-header">Messages</h2>
                     <Link to={"/admin/message"}>
                         <img
                             src="/messages.svg"

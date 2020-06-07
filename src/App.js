@@ -17,9 +17,19 @@ import MessageDetail from "./components/admin/message/MessageDetail";
 import CreateEstb from "./components/admin/establishment/CreateEstb";
 
 function App() {
+  const credential = JSON.parse(localStorage.getItem("credential"));
+  let isAuthenticated;
+  if (credential) {
+    isAuthenticated = credential.isAuthenticated;
+  }
+
   return (
-    <Router>
-      <VisitorNav />
+    <Router> 
+      {
+        isAuthenticated ?
+        <AdminNav/> :
+        <VisitorNav />
+      }
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/contact" component={ContactForm} />

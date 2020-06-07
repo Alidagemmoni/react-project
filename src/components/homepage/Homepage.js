@@ -19,14 +19,14 @@ const HomePage = () => {
     })
 
     return (
-        <Container>
+        <Container> 
             <Row>
                 <Col className="margin">
                     <h2 className="search-header">Search hotels</h2>
                 </Col>
                 <Col xs={6}>
-                    <InputGroup className="mb-3 border search margin">
-                        <Typeahead 
+                    <InputGroup className="search margin">
+                        <Typeahead
                             id="type-ahead"
                             labelKey="name"
                             onChange={hotel => history.push(`/hotelspecific/${hotel[0].id}`)}
@@ -34,14 +34,13 @@ const HomePage = () => {
                             placeholder="Search hotels..."
                         />
                         <InputGroup.Append>
-                                <Button variant="outline-secondary">Search</Button>
+                                <Button className="btn">Search</Button>
                         </InputGroup.Append>
                     </InputGroup>
                     <section className="margin">
                         <img
                             src="/travel.jpg"
                             width="100%"
-                            className="d-inline-block align-top"
                             alt="Holidaze Logo"
                         />
                         <Button className="btn" href="/hotellist" block>See all hotels</Button>

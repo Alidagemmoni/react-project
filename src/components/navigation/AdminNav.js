@@ -1,27 +1,27 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AdminNav = () => {
-    const history = useHistory(); 
-     
     const logout = () => {
         let user = JSON.parse(localStorage.getItem('credential'));
         user && (user.isAuthenticated = false);
         console.log(user)
         localStorage.setItem('credential', JSON.stringify(user));
-        history.push('/admin');
+        window.location.replace('/admin');
     }
     return (
         <Navbar className="bground" expand="lg">
-            <Navbar.Brand href="/">
-            <img  
-                src="/holidazelogo.svg"
-                width="120"
-                className="d-inline-block align-top"
-                alt="Holidaze Logo"
-            />
+            <Navbar.Brand>
+                <Link to="/admincomp">
+                    <img  
+                        src="/holidazelogo.svg"
+                        width="150"
+                        className="d-inline-block align-top"
+                        alt="Holidaze Logo"
+                    />
+                </Link>
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end">
                 <Nav>
