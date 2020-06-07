@@ -8,8 +8,15 @@ h2 {
     font-style: normal;
     font-weight: 100;
     font-size: 40px;
+    color: $header;
 }
 
 textarea {
     resize: none;
+}
+
+.bg-specific {
+    background-color: $background-color;
+    color: $text;
+    margin-bottom: 2em;
 }

@@ -3,7 +3,7 @@ import { Col, Row, Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 const MessageDetail = (props) => {
-    return (
+    return ( 
         <>
             <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
@@ -31,7 +31,7 @@ const MessageDetail = (props) => {
                     </Col>
                 </Form.Group>
             </Form>
-            <Button variant="primary" onClick={() => props.handleModalAction(true, props.contact.email)}>Respond</Button>
+            <Button variant="primary" onClick={() => props.handleModalAction(true, props.contact.email, props.contact.name)}>Respond</Button>
         </>
     )
 }

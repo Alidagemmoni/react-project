@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import NotificationContextProvider from './components/context/notifications';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NotificationContextProvider>
+      <App />
+    </NotificationContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

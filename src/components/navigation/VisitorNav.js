@@ -7,13 +7,15 @@ const VisitorNav = () => {
 
     return (
         <Navbar className="bground" expand="lg">
-            <Navbar.Brand href="/">
-            <img  
-                src="/holidazelogo.svg"
-                width="120"
-                className="d-inline-block align-top"
-                alt="Holidaze Logo"
-            />
+            <Navbar.Brand>
+                <Link to="/">
+                    <img  
+                        src="/holidazelogo.svg"
+                        width="150"
+                        className="d-inline-block align-top"
+                        alt="Holidaze Logo"
+                    />
+            </Link>
             </Navbar.Brand> 
             <Navbar.Collapse className="justify-content-end">
                 <Nav>

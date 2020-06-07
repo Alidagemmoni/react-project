@@ -9,7 +9,7 @@ class AdminLogin extends React.Component {
          this.state = {
             username: "",
             password: "",
-            isAuthenticated: false
+            isAuthenticated: false 
          }
          this.handleChange = this.handleChange.bind(this);
          this.handleLogin = this.handleLogin.bind(this);
@@ -32,7 +32,7 @@ class AdminLogin extends React.Component {
         if(admin && ((admin.username === username) && (admin.password === password))) {
             admin.isAuthenticated = true;
             localStorage.setItem('credential', JSON.stringify(admin))
-            this.props.history.push('/admincomp')
+            window.location.replace('/admincomp');
         }
     }
 
@@ -47,9 +47,10 @@ class AdminLogin extends React.Component {
                     </Row>
                     <Form style={{ padding: "20px" }}>
                         <Form.Group as={Row} controlId="formHorizontalName">
-                            <Form.Label column sm={3}>Username</Form.Label>
+                            <Form.Label className="login-label" column sm={3}>Username</Form.Label>
                             <Col>
                                 <Form.Control
+                                    className="login-input"
                                     value={this.state.username}
                                     name="username"
                                     onChange={this.handleChange}
@@ -57,9 +58,10 @@ class AdminLogin extends React.Component {
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row} controlId="formHorizontalName">
-                            <Form.Label column sm={3}>Password</Form.Label>
+                            <Form.Label className="login-label" column sm={3}>Password</Form.Label>
                             <Col>
                                 <Form.Control
+                                    className="login-input"
                                     type="password"
                                     name="password"
                                     value={this.state.password}

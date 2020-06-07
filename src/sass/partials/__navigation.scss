@@ -4,10 +4,17 @@
 
 .nav-link {
     color: $text !important;
+    font-family: "trade-gothic-next", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    background-color: $text;
+    color: $background-color !important;
 }
 
 .align-right {
     text-align: right;
     color: $text;
 }
-
