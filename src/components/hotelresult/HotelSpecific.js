@@ -36,36 +36,33 @@ function HotelSpecific(props) {
                     <article className="bg-specific"> 
                         <Row> 
                             <Col>
-                                <p>Max guests</p>
+                                <p className="hotel-specific">Max guests:</p>
                             </Col>
-                            <Col>{hotel.maxGuests}</Col> 
+                            <Col className="specific-info">{hotel.maxGuests}</Col> 
                         </Row>
                         <Row>
                             <Col>
-                                <p>Price</p>
+                                <p className="hotel-specific">Price per night:</p>
                             </Col>
-                            <Col>{hotel.price}</Col> 
+                            <Col className="specific-info">{hotel.price}$</Col> 
                         </Row>
                         <Row>
                             <Col>
-                                <p>Self-catering</p>
+                                <p className="hotel-specific">Included self-catering:</p>
                             </Col>
-                            <Col>{`${hotel.selfCatering}`}</Col> 
+                            <Col className="specific-info">{`${hotel.selfCatering}`}</Col> 
                         </Row>
                         <Row>
                             <Col>
-                                <p>Email</p>
+                                <p className="hotel-specific">Email:</p>
                             </Col>
-                            <Col>{hotel.email}</Col> 
-                        </Row>
-                        <Row>
-                            <Col>
-                                <p>Description</p> 
-                            </Col>
-                            <Col>{hotel.description}</Col> 
+                            <Col className="specific-info">{hotel.email}</Col> 
                         </Row> 
                     </article>
-                    <Button className="button" onClick={() => localStorage.setItem("hotelName", hotel.name)} href={`/bookhotel/${hotel.id}`}>Book now</Button>
+                    <Row>
+                        <Col className="hotel-specific">{hotel.description}</Col> 
+                        <Button className="button-specific" onClick={() => localStorage.setItem("hotelName", hotel.name)} href={`/bookhotel/${hotel.id}`}>Book now</Button>
+                    </Row>
                 </Col>
             </Row>
         </Container>

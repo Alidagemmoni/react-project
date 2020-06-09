@@ -28,7 +28,7 @@ function HotelList(props) {
                     <h2 className="header margin">All our hotels</h2>
                 </Col>
             </Row>
-            {
+            {  
                 list.length ?
                 list.map((hotel) => (
                     <Row key={hotel.id} className="bg-specific hotel-container">
