@@ -25,7 +25,7 @@ const AdminNav = () => {
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end">
                 <Nav>
-                    <Link className="nav-link" to={'/admin/establishments'}>Enquiries</Link>
+                    <Link className="nav-link" to={'/admin/establishments'}>Establishments</Link>
                 </Nav>
                 <Nav>
                     <Link className="nav-link" to={'/admin/createestb'}>Create establishment</Link>

@@ -31,29 +31,30 @@ function HotelList(props) {
             {
                 list.length ?
                 list.map((hotel) => (
-                    <Row key={hotel.id} className="bg-specific">
+                    <Row key={hotel.id} className="bg-specific hotel-container">
                         <Col sm={4}>
-                            <Card.Img variant="top" src={hotel.image}/>
+                            <Card.Img variant="top" className="hotel-image" src={hotel.image}/>
                         </Col>
                         <Col sm={7}>
                             <Row>
                                 <Col>
-                                    <h2>{hotel.name}</h2>  
+                                    <h2 className="hotel-name">{hotel.name}</h2>  
                                 </Col>            
                             </Row>
                             <Row>
                                 <Col>
-                                    <p>Guests: &nbsp; {hotel.maxGuests}</p>
+                                    <p className="hotel-info">Guests: &nbsp; {hotel.maxGuests}</p>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
-                                    <p>Per night: &nbsp; {hotel.price}</p>
+                                    <p className="hotel-info">Per night: &nbsp; {hotel.price}</p>
                                 </Col> 
-                                <Col>
-                                    <Button className="button" href={`/hotelspecific/${hotel.id}`}>Choose</Button>
-                                </Col>
-                            </Row>                  
+                                
+                            </Row>
+                            <Col>
+                                <Button className="choose-button" href={`/hotelspecific/${hotel.id}`}>Choose</Button>
+                            </Col>                   
                         </Col>
                     </Row>
                     ))

@@ -3,9 +3,9 @@ import { Container, Col, Row } from "react-bootstrap";
 import { BASE_URL, headers } from "../../../constants/api";
 import Spinner from "react-bootstrap/Spinner";
 import Card from "react-bootstrap/Card";
-import MessageDetail from './MessageDetail';
-import RespondModal from './RespondModal';
-import { NotificationContext } from '../../context/notifications';
+import MessageDetail from "./MessageDetail";
+import RespondModal from "./RespondModal";
+import { NotificationContext } from "../../../context/notifications";
 
 const Messages = () => {
     const [messages, setMessages] = useState([]);
@@ -58,8 +58,7 @@ const Messages = () => {
                     messages.length ?
                         messages.map((contact) => (
                             <Col md={4} key={contact.id} className="pb-3">
-                                <Card>
-                                    <Card.Header style={{ backgroundColor: '#8DB5AA' }}>Featured</Card.Header>
+                                <Card style={{backgroundColor: '#8DB5AA'}}>
                                     <Card.Body>
                                         <MessageDetail
                                          handleModalAction={handleModalAction}

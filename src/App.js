@@ -4,7 +4,7 @@ import VisitorNav from "./components/navigation/VisitorNav";
 import AdminNav from "./components/navigation/AdminNav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/homepage/Homepage";
-import ContactForm from "./components/contact/ContactUs";
+import ContactForm from "./components/contact/ContactForm";
 import AdminSignup from "./components/admin/AdminSignup";
 import HotelSpecific from "./components/hotelresult/HotelSpecific";
 import HotelList from "./components/hotels/HotelList";
@@ -15,6 +15,7 @@ import Messages from "./components/admin/message/Messages";
 import AdminLogin from "./components/admin/login/AdminLogin";
 import MessageDetail from "./components/admin/message/MessageDetail";
 import CreateEstb from "./components/admin/establishment/CreateEstb";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const credential = JSON.parse(localStorage.getItem("credential"));
@@ -44,6 +45,7 @@ function App() {
         <Route exact path="/admin/messagedetail" component={MessageDetail} />
         <Route exact path="/admin/createestb" component={CreateEstb} />
       </Switch>
+      <Footer />
     </Router>
   )
 }

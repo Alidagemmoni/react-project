@@ -1,0 +1,55 @@
+
+//All hotels
+.hotel-image {
+    height: 250px;
+    width: 100%;
+}
+
+.hotel-name {
+    color: $text;
+    font-family: "mr-eaves-modern", sans-serif;
+    font-style: normal;
+    font-size: 35px;
+}
+
+.hotel-info {
+    color: $text;
+    font-family: "mr-eaves-modern", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.choose-button {
+    background-color: $button;
+    font-family: "trade-gothic-next", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+}
+    
+.choose-button:hover {
+    box-shadow: 0 8px 20px $button;
+    background-color: $button;
+}
+
+//.hotel-container {
+    //center align and make shorter
+//}
+
+//Hotel specific
+.button {
+    background-color: $button;
+    font-family: "trade-gothic-next", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.button:hover {
+    box-shadow: 0 8px 20px $button;
+    background-color: $button;
+}
+
+.header {
+    color: $header;
+}
+

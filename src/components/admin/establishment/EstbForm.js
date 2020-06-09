@@ -6,7 +6,7 @@ const EstbForm = (props) => {
         <section className="bg-specific">
             <Form style={{ padding: "20px" }}>
                 <Form.Group as={Row} controlId="formHorizontalName">
-                    <Form.Label column sm={2}>Establishment</Form.Label>
+                    <Form.Label className="create-estb-text" column sm={2}>Establishment</Form.Label>
                     <Col sm={6}>
                         <Form.Control
                             type="name"
@@ -16,7 +16,7 @@ const EstbForm = (props) => {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formHorizontalEmail">
-                    <Form.Label column sm={2}>Email</Form.Label>
+                    <Form.Label className="create-estb-text" column sm={2}>Email</Form.Label>
                     <Col sm={6}>
                         <Form.Control
                             type="email"
@@ -26,7 +26,7 @@ const EstbForm = (props) => {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formHorizontalImage">
-                    <Form.Label column sm={2}>Image Url</Form.Label>
+                    <Form.Label className="create-estb-text" column sm={2}>Image Url</Form.Label>
                     <Col sm={6}>
                         <Form.Control
                             type="name"
@@ -36,7 +36,7 @@ const EstbForm = (props) => {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formHorizontalPrice">
-                    <Form.Label column sm={2}>Price per night</Form.Label>
+                    <Form.Label className="create-estb-text" column sm={2}>Price per night</Form.Label>
                     <Col sm={6}>
                         <Form.Control
                             type="number"
@@ -46,7 +46,7 @@ const EstbForm = (props) => {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formHorizontalDate">
-                    <Form.Label column sm={2}>Max guests</Form.Label>
+                    <Form.Label className="create-estb-text" column sm={2}>Max guests</Form.Label>
                     <Col sm={6}>
                         <Form.Control
                             type="number"
@@ -56,7 +56,7 @@ const EstbForm = (props) => {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formHorizontalDate">
-                    <Form.Label column sm={2}>Latitude</Form.Label>
+                    <Form.Label className="create-estb-text" column sm={2}>Latitude</Form.Label>
                     <Col sm={2}>
                         <Form.Control
                             type="text"
@@ -64,7 +64,7 @@ const EstbForm = (props) => {
                             onChange={(event) => props.setEstb({ ...props.estb, lat: event.target.value })}
                         />
                     </Col>
-                    <Form.Label column sm={2}>Longitude</Form.Label>
+                    <Form.Label className="create-estb-text" column sm={2}>Longitude</Form.Label>
                     <Col sm={2}>
                         <Form.Control
                             type="text"
@@ -74,7 +74,7 @@ const EstbForm = (props) => {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row}>
-                    <Form.Label column sm={2}>Description</Form.Label>
+                    <Form.Label className="create-esbt-text" column sm={2}>Description</Form.Label>
                     <Col sm={6}>
                         <Form.Control as="textarea" rows="4"
                             value={props.estb.description}
@@ -84,6 +84,7 @@ const EstbForm = (props) => {
                 <Form.Group as={Row} controlId="formHorizontalDate">
                     <Form.Label column sm={2} />
                     <Form.Check
+                        className="create-esbt-text"
                         type="checkbox"
                         label="Self Catering"
                         checked={props.estb.selfCatering}

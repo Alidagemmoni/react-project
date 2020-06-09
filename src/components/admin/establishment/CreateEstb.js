@@ -26,7 +26,7 @@ const CreateEstb = (props) => {
     }
 
     return (
-        <Container>
+        <Container className="align-center">
             <Col lg={10}>
                 <Row className="margin">
                     <Col>
