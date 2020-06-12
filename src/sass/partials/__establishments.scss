@@ -55,6 +55,18 @@
     font-size: 18px;
 }
 
+.button {
+    font-family: "trade-gothic-next", sans-serif;
+    font-style: bold;
+    font-size: 20px;
+    background-color: $button;
+}
+
+.button:hover {
+    box-shadow: 0px 5px 15px $button;
+    background-color: $button;
+}
+
 // Messages
 .button-respond {
     font-family: "trade-gothic-next", sans-serif;
@@ -66,4 +78,34 @@
 .button-respond:hover {
     box-shadow: 0px 5px 15px $button;
     background-color: $button;
+}
+
+
+//Media establishments
+//Tablet
+@media screen and (min-width: 720px) and (max-width: 1240px) {
+    .media-form *,
+    .media-form *:before,
+    .media-form *:after {
+        -webkit-box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+    }
+    
+    .media-form {
+        flex-direction: column;
+        width: 80%;
+       
+    }
+
+}
+
+//Mobile
+@media screen and (max-width: 720px) {
+    .media-form{
+        flex-direction: column;
+        width: 80%;
+    }
+
+ 
 }

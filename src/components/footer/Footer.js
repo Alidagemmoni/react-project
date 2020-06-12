@@ -1,32 +1,31 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+  
 const Footer = () => {
     return (
-        <Row className="footer"> 
-            <Col className="icons">
-                <Link to="https://www.facebook.com/">
-                    <img  
-                        src="/facebook.png"
-                        width="50"
-                        className="d-inline-block align-top"
-                        alt="Facebook icon"
-                    />
-                </Link>
-                <Link to="https://www.instagram.com/">
-                    <img  
-                        src="/instagram.png"
-                        width="50"
-                        className="d-inline-block align-top"
-                        alt="Instagram icon"
-                    />
-                </Link> 
-            </Col>
-            <Col className="copyright" sm={10}>
-                <p>Copyright &copy; Holidaze 2020</p>
-            </Col>
-        </Row>
+        <footer>
+            <ul className="footer-options">
+                <li className="footer-link">
+                    <Link to="https://www.facebook.com/">
+                        <img  
+                            src="/facebook.png"
+                            width="50"
+                            alt="Facebook icon"
+                        />
+                    </Link>
+                </li>
+                <li className="footer-link">
+                    <Link to="https://www.instagram.com/">
+                        <img  
+                            src="/instagram.png"
+                            width="50"
+                            alt="Instagram icon"
+                        />
+                    </Link> 
+                </li>
+            </ul>
+            <span>Copyright &copy; Holidaze 2020</span>
+        </footer>
     )
 }
 

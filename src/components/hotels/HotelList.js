@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
+import ListGroup from "react-bootstrap/ListGroup";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Spinner from "react-bootstrap/Spinner";
@@ -25,17 +26,17 @@ function HotelList(props) {
         <Container>  
             <Row>  
                 <Col>
-                    <h2 className="header margin">All our hotels</h2>
+                    <h2 className="margin">All our hotels</h2>
                 </Col>
             </Row>
             {  
                 list.length ?
                 list.map((hotel) => (
-                    <Row key={hotel.id} className="bg-specific hotel-container">
-                        <Col sm={4}>
+                    <Row key={hotel.id} className="bg-specific container-width">
+                        <Col lg={3} className="pl-0 pr-0">
                             <Card.Img variant="top" className="hotel-image" src={hotel.image}/>
                         </Col>
-                        <Col sm={7}>
+                        <Col lg={6}>
                             <Row>
                                 <Col>
                                     <h2 className="hotel-name">{hotel.name}</h2>  
@@ -45,17 +46,22 @@ function HotelList(props) {
                                 <Col>
                                     <p className="hotel-info">Guests: &nbsp; {hotel.maxGuests}</p>
                                 </Col>
-                            </Row>
+                            </Row> 
                             <Row>
                                 <Col>
-                                    <p className="hotel-info">Per night: &nbsp; {hotel.price}</p>
+                                    <p className="hotel-info">Longitude: &nbsp; {hotel.lng}</p>
                                 </Col> 
-                                
-                            </Row>
-                            <Col>
-                                <Button className="choose-button" href={`/hotelspecific/${hotel.id}`}>Choose</Button>
-                            </Col>                   
+                            </Row>      
+                            <Row>
+                                <Col>
+                                    <p className="hotel-info">Latitude: &nbsp; {hotel.lat}</p>
+                                </Col> 
+                            </Row>         
                         </Col>
+                        <Col sm={3}>
+                            <ListGroup.Item className="hotel-price">Price per night: &nbsp; {hotel.price}$</ListGroup.Item> 
+                        </Col>
+                        <Button className="choose-button" block href={`/hotelspecific/${hotel.id}`}>Choose</Button>  
                     </Row>
                     ))
                     : <Spinner animation="grow" />

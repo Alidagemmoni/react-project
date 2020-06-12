@@ -15,3 +15,30 @@
 .comp-header {
     color: $text;
 }
+
+//Tablet
+@media screen and (min-width: 720px) and (max-width: 1240px) {
+    .flex-column {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .block-1, .block-2, .block-3 {
+        display: flex;
+        flex: 100%; 
+    }
+
+}
+
+//Mobile
+@media screen and (max-width: 720px) {
+    .flex-column {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .block-1, .block-2, .block-3 {
+        display: flex;
+        flex: 100%;
+    }
+}

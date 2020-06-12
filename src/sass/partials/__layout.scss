@@ -1,7 +1,6 @@
 body {
     background-color: $background-color;
     background-color:rgba($background-color, 0.2);
-    margin-bottom: 80px;
 }
 
 h2 {
@@ -21,3 +20,8 @@ textarea {
     color: $text;
     margin-bottom: 2em;
 }
+
+.container {
+    position: relative;
+    min-height: calc(90vh - 4rem);
+  }

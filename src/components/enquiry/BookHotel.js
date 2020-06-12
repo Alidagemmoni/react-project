@@ -34,7 +34,7 @@ const BookHotel = (props) => {
     }
 
 return (
-        <Container>
+        <Container className="align-center">
             <Col lg={8}>
                 <Row className="margin">
                     <Col>

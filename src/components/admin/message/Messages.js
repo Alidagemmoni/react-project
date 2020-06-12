@@ -57,7 +57,7 @@ const Messages = () => {
                 {
                     messages.length ?
                         messages.map((contact) => (
-                            <Col md={4} key={contact.id} className="pb-3">
+                            <Col md={12} lg={4} key={contact.id} className="pb-3">
                                 <Card style={{backgroundColor: '#8DB5AA'}}>
                                     <Card.Body>
                                         <MessageDetail

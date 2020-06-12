@@ -10,7 +10,7 @@ const MessageDetail = (props) => {
                     <Form.Label className="estb-label" column sm="4">
                         From
                     </Form.Label>
-                    <Col sm="8">
+                    <Col sm={8}>
                         <Form.Control className="estb-text" type="email" plaintext readOnly defaultValue={props.contact.name} />
                     </Col>
                 </Form.Group>
@@ -18,7 +18,7 @@ const MessageDetail = (props) => {
                     <Form.Label className="estb-label" column sm="4">
                         Email
                     </Form.Label>
-                    <Col sm="8">
+                    <Col sm={8}>
                         <Form.Control className="estb-text" plaintext readOnly defaultValue={props.contact.email} />
                     </Col>
                 </Form.Group>
@@ -26,7 +26,7 @@ const MessageDetail = (props) => {
                     <Form.Label className="estb-label" column sm="4">
                         Message
                     </Form.Label>
-                    <Col sm="6">
+                    <Col sm={8}>
                         <Form.Control className="estb-text" plaintext readOnly defaultValue={props.contact.message} as="textarea" rows={5} />
                     </Col>
                 </Form.Group>

@@ -19,13 +19,13 @@ const HomePage = () => {
     })
 
     return (
-        <Container> 
+        <Container className="margin"> 
             <Row>
-                <Col className="margin">
+                <Col>
                     <h2 className="search-header">Search hotels</h2>
                 </Col>
-                <Col xs={6}>
-                    <InputGroup className="search margin">
+                <Col lg={6}>
+                    <InputGroup>
                         <Typeahead
                             id="type-ahead"
                             labelKey="name"
@@ -34,14 +34,19 @@ const HomePage = () => {
                             placeholder="Search hotels..."
                         />
                         <InputGroup.Append>
-                                <Button className="btn">Search</Button>
+                        <img 
+                            src="/search.png"
+                            width="40"
+                            alt="Search icon"
+                            height="40"
+                        />
                         </InputGroup.Append>
                     </InputGroup>
                     <section className="margin">
                         <img
                             src="/travel.jpg"
                             width="100%"
-                            alt="Holidaze Logo"
+                            alt="Front side of brick house with flowers"
                         />
                         <Button className="btn" href="/hotellist" block>See all hotels</Button>
                     </section>
