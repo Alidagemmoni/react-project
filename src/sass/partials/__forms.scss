@@ -1,11 +1,17 @@
+//Contact, create estb, book hotel
 .align-center {
+    margin-top: 1em;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.contact-label {
+//Contact page
+.form-label {
     font-family: "trade-gothic-next", sans-serif;
     font-style: normal;
     font-size: 18px;
+}
+
+.form-message {
+    color: #b91515ba;
 }

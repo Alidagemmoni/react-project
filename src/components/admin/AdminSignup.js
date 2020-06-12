@@ -25,18 +25,20 @@ const AdminSignup = () => {
                 </Row>
                 <Form style={{ padding: "20px" }}>
                     <Form.Group as={Row} controlId="formHorizontalName">
-                        <Form.Label column sm={3}>Username</Form.Label>
+                        <Form.Label className="login-label" column sm={3}>Username</Form.Label>
                         <Col>
                             <Form.Control
+                                className="login-input"
                                 value={user.username}
                                 onChange={(event) => setUser({...user, username: event.target.value.toLowerCase()})}
                             />
                         </Col>
                     </Form.Group>
                     <Form.Group as={Row} controlId="formHorizontalName">
-                        <Form.Label column sm={3}>Password</Form.Label>
+                        <Form.Label className="login-label" column sm={3}>Password</Form.Label>
                         <Col>
                             <Form.Control
+                                className="login-input"
                                 type="password"
                                 value={user.password}
                                 onChange={(event) => setUser({...user, password: event.target.value.toLowerCase()})}

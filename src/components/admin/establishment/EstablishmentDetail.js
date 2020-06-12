@@ -5,10 +5,10 @@ const EstablishmentDetail = (props) => {
     if (props.status.filter((data) => data.id === props.enquiry.id)[0] && props.status.filter((data) => data.id === props.enquiry.id)[0].action === "accept") {
         return (
             <>
-                <h2 className="text-center">Accepted</h2>
+                <h2 className="text-center respond-text">Accepted</h2>
                 <img
-                    src="/accepted.svg"
-                    width="100"
+                    src="/accepted.png"
+                    width="80"
                     alt="Accpeted icon"
                     className="middle"
                 /> 
@@ -17,10 +17,10 @@ const EstablishmentDetail = (props) => {
     } else if (props.status.filter((data) => data.id === props.enquiry.id)[0] && props.status.filter((data) => data.id === props.enquiry.id)[0].action === "decline") {
         return (
             <>
-                <h2 className="text-center">Declined</h2>
+                <h2 className="text-center respond-text">Declined</h2>
                 <img
-                    src="/decline.svg"
-                    width="78"
+                    src="/declined.png"
+                    width="62"
                     alt="Declined icon"
                     className="middle"
                 /> 
@@ -28,36 +28,36 @@ const EstablishmentDetail = (props) => {
         )
     } else {
         return (
-            <Form>
+            <Form >
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label className="estb-text" column sm="4">
+                    <Form.Label className="estb-label" column sm="4">
                         Name:
                     </Form.Label>
-                    <Col sm="8">
+                    <Col sm={8}>
                         <Form.Control className="estb-text" plaintext readOnly defaultValue={props.enquiry.name} />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label className="estb-text" column sm="4">
+                    <Form.Label className="estb-label" column sm="4">
                         Email:
                     </Form.Label>
-                    <Col sm="8">
+                    <Col sm={8}>
                         <Form.Control className="estb-text" type="email" plaintext readOnly defaultValue={props.enquiry.email} />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label className="estb-text" column sm="4">
+                    <Form.Label className="estb-label" column sm="4">
                         Check-In:
-                    </Form.Label>
-                    <Col sm="8">
+                    </Form.Label> 
+                    <Col sm={8}>
                         <Form.Control className="estb-text" plaintext readOnly defaultValue={new Date(props.enquiry.checkIn).toDateString()} />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label className="estb-text" column sm="4">
+                    <Form.Label className="estb-label" column sm="4">
                         Check-Out:
                     </Form.Label>
-                    <Col sm="6">
+                    <Col sm={8}>
                         <Form.Control className="estb-text" plaintext readOnly defaultValue={new Date(props.enquiry.checkOut).toDateString()} />
                     </Col>
                 </Form.Group>

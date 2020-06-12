@@ -20,3 +20,8 @@ textarea {
     color: $text;
     margin-bottom: 2em;
 }
+
+.container {
+    position: relative;
+    min-height: calc(90vh - 4rem);
+  }

@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import { notifications } from '../reducers/notification';
+import { notifications } from '../components/reducers/notification';
 
 export const NotificationContext = createContext();
 
@@ -12,5 +12,4 @@ const NotificationContextProvider = ({ children }) => {
         </NotificationContext.Provider>
     )
 }
-
 export default NotificationContextProvider;

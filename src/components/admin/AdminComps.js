@@ -5,37 +5,37 @@ import { Link } from "react-router-dom";
 
 const AdminComp = () => {
     return ( 
-        <Container className="margin">
+        <Container className="margin flex-column">
             <Row> 
-                <Col className="bg-specific center">
+                <Col className="bg-specific center block-1">
                     <h2 className="comp-header">Establishments</h2>
                     <Link to={"/admin/establishments"}>
                         <img
-                        src="/enquiry.svg"
+                        src="/enquiry.png"
                         width="100"
-                        alt="Holidaze Logo"
+                        alt="Letter and person icons"
                         className="middle"
                         /> 
                     </Link>
                 </Col>
-                <Col className="bg-specific center">
+                <Col className="bg-specific center block-2">
                     <h2 className="comp-header">Create establishment</h2>
                     <Link to={"/admin/createestb"}>
                     <img
-                        src="/estb.svg"
+                        src="/estb.png"
                         width="100"
-                        alt="Holidaze Logo"
+                        alt="House icon"
                         className="middle"
                     />
                     </Link>
                 </Col>
-                <Col className="bg-specific center">
+                <Col className="bg-specific center block-3">
                     <h2 className="comp-header">Messages</h2>
                     <Link to={"/admin/message"}>
                         <img
-                            src="/messages.svg"
+                            src="/messages.png"
                             width="100"
-                            alt="Holidaze Logo"
+                            alt="Letter icon"
                             className="middle"
                         />
                     </Link>

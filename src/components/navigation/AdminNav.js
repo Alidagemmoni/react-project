@@ -23,9 +23,10 @@ const AdminNav = () => {
                     />
                 </Link>
             </Navbar.Brand>
-            <Navbar.Collapse className="justify-content-end">
-                <Nav>
-                    <Link className="nav-link" to={'/admin/establishments'}>Enquiries</Link>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ml-auto">
+                    <Link className="nav-link" to={'/admin/establishments'}>Establishments</Link>
                 </Nav>
                 <Nav>
                     <Link className="nav-link" to={'/admin/createestb'}>Create establishment</Link>
@@ -35,7 +36,7 @@ const AdminNav = () => {
                 </Nav>
                 <Nav>
                     <Link className="nav-link" onClick={logout} to={'/admin'}>Log out</Link>
-                </Nav>  
+                </Nav>
             </Navbar.Collapse>
       </Navbar>
     )

@@ -12,13 +12,13 @@ const VisitorNav = () => {
                     <img  
                         src="/holidazelogo.svg"
                         width="150"
-                        className="d-inline-block align-top"
                         alt="Holidaze Logo"
                     />
             </Link>
             </Navbar.Brand> 
-            <Navbar.Collapse className="justify-content-end">
-                <Nav>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ml-auto">
                     <Link className="nav-link" to={'/'}>Home</Link>
                 </Nav>
                 <Nav>
@@ -27,6 +27,7 @@ const VisitorNav = () => {
                 <Nav>
                     <Link className="nav-link" to={'/admin'}>Admin Login</Link>
                 </Nav> 
+          
             </Navbar.Collapse>
       </Navbar>
     )
